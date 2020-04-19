@@ -1,0 +1,56 @@
+.section-banners div {
+  /* background-color: rgb(36, 35, 35); */
+  height: 42vh;
+}
+#finances {
+  background: linear-gradient(
+      0deg,
+      rgba(47, 137, 252, 0.3),
+      rgba(10, 60, 124, 0.7)
+    ),
+    url("../../assets/img/finances.jpg") no-repeat center center;
+}
+
+#finances:hover {
+  background: linear-gradient(
+      0deg,
+      rgba(67, 27, 112, 0.7),
+      rgba(196, 87, 24, 0.7)
+    ),
+    url("../../assets/img/finances.jpg") no-repeat center center;
+}
+
+#planifications {
+  background: linear-gradient(
+      0deg,
+      rgba(48, 227, 202, 0.3),
+      rgba(4, 92, 80, 0.7)
+    ),
+    url("../../assets/img/planification.png") no-repeat center center;
+}
+#planifications:hover {
+  background: linear-gradient(
+      45deg,
+      rgba(67, 27, 112, 0.7),
+      rgba(196, 87, 24, 0.7)
+    ),
+    url("../../assets/img/planification.png") no-repeat center center;
+}
+
+#objectifs {
+  background: linear-gradient(
+      0deg,
+      rgba(89, 109, 134, 0.7),
+      rgba(47, 137, 252, 0.7)
+    ),
+    url("../../assets/img/objectifs.jpg") no-repeat center center;
+  background-size: 400px;
+}
+#objectifs:hover {
+  background: linear-gradient(
+      135deg,
+      rgba(67, 27, 112, 0.7),
+      rgba(196, 87, 24, 0.7)
+    ),
+    url("../../assets/img/objectifs.jpg") no-repeat center center;
+}

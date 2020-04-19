@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark main-header fixed-top">
+  <div class="container">
+    <a
+      class="navbar-brand"
+      [routerLink]="['']"
+      routerLinkActive="router-link-active"
+      >FOP</a
+    >
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav float-right ml-auto">
+        <li class="nav-item active">
+          <a
+            class="nav-link"
+            [routerLink]="['finances']"
+            routerLinkActive="router-link-active"
+            >Finances <span class="sr-only">(current)</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="['/planifications']"
+            routerLinkActive="router-link-active"
+            >Planifications</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="['/objectifs']"
+            routerLinkActive="router-link-active"
+            >Objectifs</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
