@@ -22,9 +22,12 @@
     "@angular/platform-server": "^9.1.2",
     "@angular/router": "^9.1.2",
     "bootstrap": "^4.4.1",
+    "chart.js": "^2.9.3",
     "core-js": "^3.6.5",
     "jquery": "^3.4.1",
     "popper.js": "^1.16.1",
+    "primeicons": "^2.0.0",
+    "primeng": "^9.0.5",
     "rxjs": "~6.5.5",
     "tslib": "^1.9.0",
     "zone.js": "~0.10.3"

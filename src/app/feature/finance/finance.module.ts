@@ -3,9 +3,10 @@ import { CommonModule } from "@angular/common";
 import { RouterModule } from "@angular/router";
 import { FinanceRoutingModule } from "./finance-routing.module";
 import { SharedModule } from "src/app/shared/shared/shared.module";
+import { FinanceMainComponent } from './finance-main/finance-main.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [FinanceMainComponent],
   imports: [SharedModule, FinanceRoutingModule],
 })
 export class FinanceModule {}

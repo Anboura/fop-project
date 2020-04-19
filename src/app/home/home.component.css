@@ -41,10 +41,10 @@
   background: linear-gradient(
       0deg,
       rgba(89, 109, 134, 0.7),
-      rgba(47, 137, 252, 0.7)
+      rgba(7, 71, 155, 0.8)
     ),
     url("../../assets/img/objectifs.jpg") no-repeat center center;
-  background-size: 400px;
+  background-size: 600px;
 }
 #objectifs:hover {
   background: linear-gradient(
@@ -53,4 +53,5 @@
       rgba(196, 87, 24, 0.7)
     ),
     url("../../assets/img/objectifs.jpg") no-repeat center center;
+  background-size: 600px;
 }
