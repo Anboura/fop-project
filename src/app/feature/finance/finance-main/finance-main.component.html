@@ -1,1 +1,30 @@
-<p>finance-main works!</p>
+<!-- Update Infos  -->
+<div class="row">
+  <div class="col d-flex justify-content-end pr-0">
+    <div class="update-infos d-flex flex-column justify-content-center">
+      <p class="update-infos__text text-center">
+        Derniere mise à Jour le :
+        <span class="update-infos__date"> {{ updateDate }}</span>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="row mt-5">
+  <!-- doughnut charts  -->
+  <div
+    class="col-lg-6 col-md-12 d-flex flex-column justify-content-center px-0"
+  >
+    <p-chart type="doughnut" [data]="mounthExpense"></p-chart>
+    <p class="text-center charts-description mt-3 p-2 align-self-center mb-3">
+      Répartition des dépenses
+    </p>
+  </div>
+  <!-- bar charts  -->
+  <div class="col-lg-6 col-md-12 d-flex flex-column justify-content-center">
+    <p-chart type="bar" [data]="data"></p-chart>
+    <p class="text-center charts-description mt-3 p-2 align-self-center">
+      Graph des dépenses
+    </p>
+  </div>
+</div>
