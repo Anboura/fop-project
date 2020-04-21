@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Router, ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: "app-finance-main",
@@ -9,8 +10,8 @@ export class FinanceMainComponent implements OnInit {
   updateDate = "12/04/2020";
   data: any;
   mounthExpense: any;
-
-  constructor() {
+  dataTableTitle = "Dépenses Avril 2020";
+  constructor(private router: Router, private route: ActivatedRoute) {
     this.data = {
       labels: ["January", "February", "March", "April", "May", "June", "July"],
       datasets: [
@@ -32,6 +33,7 @@ export class FinanceMainComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
   initMounthExpenses() {
     this.mounthExpense = {
       labels: ["A", "B", "C"],
@@ -43,5 +45,9 @@ export class FinanceMainComponent implements OnInit {
         },
       ],
     };
+  }
+
+  onExpensesDetails() {
+    this.router.navigate(["expenses"], { relativeTo: this.route });
   }
 }

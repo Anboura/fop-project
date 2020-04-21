@@ -1,6 +1,6 @@
 <!-- Update Infos  -->
 <div class="row">
-  <div class="col d-flex justify-content-end pr-0">
+  <div class="col-sm-12 d-flex justify-content-end pr-0">
     <div class="update-infos d-flex flex-column justify-content-center">
       <p class="update-infos__text text-center">
         Derniere mise à Jour le :
@@ -10,21 +10,44 @@
   </div>
 </div>
 
-<div class="row mt-5">
+<div class="row mt-5 mb-5">
   <!-- doughnut charts  -->
   <div
-    class="col-lg-6 col-md-12 d-flex flex-column justify-content-center px-0"
+    class="col-lg-6 col-md-12 mb-md-3 d-flex flex-column justify-content-start px-0 bordered-block-shadow__right charts-element"
   >
-    <p-chart type="doughnut" [data]="mounthExpense"></p-chart>
-    <p class="text-center charts-description mt-3 p-2 align-self-center mb-3">
-      Répartition des dépenses
-    </p>
+    <div
+      class="mt-3 p-3 mb-4 charts-element__title bordered-block-shadow__primary"
+    >
+      <h3 class="text-center">
+        Répartition des dépenses
+      </h3>
+    </div>
+
+    <p-chart type="doughnut" [data]="mounthExpense" class="mb-4"></p-chart>
+    <div class="d-flex justify-content-center">
+      <button class="btn btn-primary" (click)="onExpensesDetails()">
+        Voir les détails
+      </button>
+    </div>
   </div>
   <!-- bar charts  -->
-  <div class="col-lg-6 col-md-12 d-flex flex-column justify-content-center">
-    <p-chart type="bar" [data]="data"></p-chart>
-    <p class="text-center charts-description mt-3 p-2 align-self-center">
-      Graph des dépenses
-    </p>
+  <div
+    class="col-lg-6 col-md-12 d-flex flex-column justify-content-start charts-element px-0"
+  >
+    <div
+      class="mt-3 p-3 mb-4 charts-element__title bordered-block-shadow__primary"
+    >
+      <h3 class="text-center">
+        Graph des dépenses
+      </h3>
+    </div>
+
+    <p-chart type="bar" [data]="data" class="px-2 px-md-0"></p-chart>
   </div>
+</div>
+<div class="row my-md-3 mx-md-2 bordered-block-shadow">
+  <app-finance-data-table
+    [title]="dataTableTitle"
+    class="col-sm-12 mb-5"
+  ></app-finance-data-table>
 </div>

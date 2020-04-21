@@ -19,11 +19,20 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav float-right ml-auto">
-        <li class="nav-item active">
+        <li class="nav-item">
           <a
             class="nav-link"
-            [routerLink]="['finances']"
-            routerLinkActive="router-link-active"
+            [routerLink]="['/']"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Home <span class="sr-only">(current)</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="['/finances']"
+            routerLinkActive="active"
             >Finances <span class="sr-only">(current)</span></a
           >
         </li>
@@ -31,7 +40,7 @@
           <a
             class="nav-link"
             [routerLink]="['/planifications']"
-            routerLinkActive="router-link-active"
+            routerLinkActive="active"
             >Planifications</a
           >
         </li>
@@ -39,7 +48,7 @@
           <a
             class="nav-link"
             [routerLink]="['/objectifs']"
-            routerLinkActive="router-link-active"
+            routerLinkActive="active"
             >Objectifs</a
           >
         </li>

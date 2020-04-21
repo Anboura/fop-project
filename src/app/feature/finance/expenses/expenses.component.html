@@ -1,0 +1,42 @@
+<div class="container bordered-block-shadow">
+  <div class="row justify-content-center">
+    <h1 class="display-4 text center">Dépenses</h1>
+  </div>
+  <div class="row justify-content-center">
+    <h1 class="display-4 text-center">{{ date }}</h1>
+  </div>
+</div>
+<div
+  class="row align-items-center my-5 py-5 bordered-block-shadow"
+  *ngFor="let expense of expenses"
+>
+  <!-- Expenses Details -->
+  <div
+    class="col-md-5 col-sm-12 order-2 order-md-1 mx-4 my-4 bordered-block-shadow details-block"
+  >
+    <div class="row justify-content-center">
+      <p class="text-center subtitle">Details :</p>
+    </div>
+    <div class="text-center">
+      <p>Consomé: {{ expense.total }} £</p>
+      <p>Prévue: {{ expense.prevue }} £</p>
+      <p>Dépassement: {{ expense.depassement }} £</p>
+    </div>
+    <div class="row justify-content-center my-4">
+      <button class="btn btn-outline-dark btn-lg" [routerLink]="[expense.id]">
+        Détail de la dépense
+      </button>
+    </div>
+  </div>
+  <div class="col-md-6 col-sm-12 order-1 order-md-2 mb-sm-5">
+    <div class="d-flex justify-content-center">
+      <p class="text-center subtitle">{{ expense.category.label }}</p>
+    </div>
+
+    <p-chart
+      type="doughnut"
+      [data]="expense.categoryExpenseChart"
+      class="mb-4"
+    ></p-chart>
+  </div>
+</div>

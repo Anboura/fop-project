@@ -3,19 +3,31 @@
     class="col-12 section-banner bg-success d-flex flex-column justify-content-center"
     id="finances"
   >
-    <h1 class="display-4 text-white text text-center">Finances</h1>
+    <h1
+      class="display-4 text-white text text-center"
+      [routerLink]="['/finances']"
+    >
+      Finances
+    </h1>
   </div>
 
   <div
     class="col-sm-12 col-lg-8 section-banner bg-dark d-flex flex-column justify-content-center my-md-2"
     id="planifications"
   >
-    <h1 class="display-4 text-white text-center">Planifications</h1>
+    <h1
+      class="display-4 text-white text-center"
+      [routerLink]="['planifications']"
+    >
+      Planifications
+    </h1>
   </div>
   <div
     class="col-sm-12 col-lg-4 section-banner bg-primary d-flex flex-column justify-content-center my-md-2"
     id="objectifs"
   >
-    <h1 class="display-4 text-white text-center">Objectifs</h1>
+    <h1 class="display-4 text-white text-center" [routerLink]="['objectifs']">
+      Objectifs
+    </h1>
   </div>
 </div>

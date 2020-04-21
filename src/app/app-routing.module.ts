@@ -1,11 +1,22 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from "./home/home.component";
+import { AuthguardService } from "./services/authguard.service";
+import { AuthenticationComponent } from "./authentication/authentication.component";
 
 const routes: Routes = [
-  { path: "", component: HomeComponent },
-  { path: "planifications", component: HomeComponent },
-  { path: "objectifs", component: HomeComponent },
+  { path: "", canActivate: [AuthguardService], component: HomeComponent },
+  {
+    path: "planifications",
+    canActivate: [AuthguardService],
+    component: HomeComponent,
+  },
+  {
+    path: "objectifs",
+    canActivate: [AuthguardService],
+    component: HomeComponent,
+  },
+  { path: "authentication", component: AuthenticationComponent },
 ];
 
 @NgModule({

@@ -1,0 +1,32 @@
+<div class="row align-items-center my-5 py-5 bordered-block-shadow">
+  <!-- Expenses Details -->
+  <div
+    class="col-md-5 col-sm-12 order-2 order-md-1 mx-4 my-4 bordered-block-shadow details-block"
+  >
+    <div class="row justify-content-center">
+      <p class="text-center subtitle">Details :</p>
+    </div>
+    <div class="text-center">
+      <p>Consomé: {{ expense.total }} £</p>
+      <p>Prévue: {{ expense.prevue }} £</p>
+      <p>Dépassement: {{ expense.depassement }} £</p>
+    </div>
+  </div>
+  <div class="col-md-6 col-sm-12 order-1 order-md-2 mb-sm-5">
+    <div class="d-flex justify-content-center">
+      <p class="text-center subtitle">{{ expense.category.label }}</p>
+    </div>
+
+    <p-chart
+      type="doughnut"
+      [data]="expense.categoryExpenseChart"
+      class="mb-4"
+    ></p-chart>
+  </div>
+</div>
+<div class="row align-items-center my-5 py-5 bordered-block-shadow">
+  <app-finance-data-table
+    class="col-sm-12 mb-5"
+    [title]="dataTableTtitle"
+  ></app-finance-data-table>
+</div>
