@@ -6,7 +6,7 @@ import { ExpenseComponent } from "./expenses/expense/expense.component";
 import { AuthguardService } from "src/app/services/authguard.service";
 const routes = [
   {
-    path: "finances",
+    path: "",
     canActivate: [AuthguardService],
     component: FinanceMainComponent,
   },

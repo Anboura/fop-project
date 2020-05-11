@@ -52,6 +52,19 @@
             >Objectifs</a
           >
         </li>
+        <li class="nav-item" *ngIf="!isUserAuthenticated; else deconnexion">
+          <a
+            class="nav-link"
+            [routerLink]="['/authentication']"
+            routerLinkActive="active"
+            >Se Connecter</a
+          >
+        </li>
+        <ng-template #deconnexion>
+          <li class="nav-item" (click)="logout()">
+            <a class="nav-link">Se Deconecter</a>
+          </li>
+        </ng-template>
       </ul>
     </div>
   </div>

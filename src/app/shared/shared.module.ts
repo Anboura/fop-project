@@ -4,9 +4,11 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MatTableModule } from "@angular/material/table";
 import { MatInputModule } from "@angular/material/input";
 import { HttpClientModule } from "@angular/common/http";
+import { AlertComponent } from "./alert/alert.component";
+import { PlaceHolderDirective } from "./directives/place-holder.directive";
 
 @NgModule({
-  declarations: [],
+  declarations: [AlertComponent, PlaceHolderDirective],
 
   imports: [
     CommonModule,
@@ -23,6 +25,8 @@ import { HttpClientModule } from "@angular/common/http";
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    AlertComponent,
+    PlaceHolderDirective,
   ],
 })
 export class SharedModule {}
